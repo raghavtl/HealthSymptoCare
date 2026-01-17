@@ -25,3 +25,7 @@ Thumbs.db
 # logs
 npm-debug.log*
 yarn-error.log*
+
+# Large media files
+*.mp3
+*.wav
