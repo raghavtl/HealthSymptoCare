@@ -1,0 +1,1034 @@
+[dotenv@17.2.1] injecting env (8) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Connected to SQLite database
+SQLite database connection established successfully
+SQLite tables created or already exist
+Health tips inserted successfully
+Body parts inserted successfully
+Symptoms inserted successfully
+Body part symptoms inserted successfully
+Conditions inserted successfully
+Condition symptoms inserted successfully
+Medicines inserted successfully
+Condition medicines inserted successfully
+Diet plans inserted successfully
+Workout plans inserted successfully
+Foods inserted successfully
+Recipes inserted successfully
+Workouts inserted successfully
+Sample data inserted into SQLite database
+SQLite database initialization completed successfully
+Sample data inserted into SQLite database
+SQLite database initialization completed successfully
+SQLite database initialized successfully
+Server running on port 5000
+API is available at http://localhost:5000/api
+[2025-09-26T17:53:45.421Z] GET /api/health
+Request Headers: {
+  'user-agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584',
+  host: 'localhost:5000',
+  connection: 'Keep-Alive'
+}
+[2025-09-26T17:53:45.423Z] Response Status: 200
+[2025-09-26T17:55:58.600Z] POST /api/users/login
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'content-length': '60',
+  'sec-ch-ua-platform': '"Windows"',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'content-type': 'application/json',
+  'sec-ch-ua-mobile': '?0',
+  origin: 'http://localhost:3011',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/login',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+Request Body: { email: 'raghavraghavtl@gmail.com', password: 'Raghav123*' }
+Login attempt for email: raghavraghavtl@gmail.com
+Normalized login email: raghavraghavtl@gmail.com
+Looking for user with email: raghavraghavtl@gmail.com
+Normalized email for lookup: raghavraghavtl@gmail.com
+User found with ID: 1, email: raghavraghavtl@gmail.com
+Comparing input email: raghavraghavtl@gmail.com with stored email: raghavraghavtl@gmail.com
+Email comparison: {
+  loginEmail: 'raghavraghavtl@gmail.com',
+  databaseEmail: 'raghavraghavtl@gmail.com',
+  match: true
+}
+Verifying password...
+Password verification result: true
+Generating token for user ID: 1, email: raghavraghavtl@gmail.com
+Token generated successfully
+Login successful for user: raghav (raghavraghavtl@gmail.com)
+[2025-09-26T17:55:58.758Z] Response Status: 200
+[2025-09-26T17:55:58.810Z] GET /api/wellness-logs/user/1
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/dashboard',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+Received request for wellness logs for user ID: 1
+Query parameters: [Object: null prototype] {}
+Found 2 wellness logs for user ID: 1
+[2025-09-26T17:55:58.815Z] Response Status: 200
+[2025-09-26T17:55:58.824Z] GET /api/wellness-logs/user/1
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/dashboard',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"19a-gUGmazQK/f3Uy/jCR8SlTwcA2m4"'
+}
+Received request for wellness logs for user ID: 1
+Query parameters: [Object: null prototype] {}
+Found 2 wellness logs for user ID: 1
+[2025-09-26T17:55:58.828Z] Response Status: 200
+[2025-09-26T17:57:04.232Z] GET /api/diet-and-fitness/profile
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T17:57:04.242Z] Response Status: 200
+[2025-09-26T17:57:04.254Z] GET /api/diet-and-fitness/profile
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"'
+}
+[2025-09-26T17:57:04.259Z] Response Status: 200
+[2025-09-26T17:58:11.575Z] PUT /api/diet-and-fitness/profile
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'content-length': '228',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'content-type': 'application/json',
+  'sec-ch-ua-mobile': '?0',
+  origin: 'http://localhost:3011',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+Request Body: {
+  age: '19',
+  gender: 'male',
+  height_cm: '5.7',
+  weight_kg: '58.8',
+  activity_level: 'light',
+  dietary_preference: 'vegan',
+  goal: 'muscleGain',
+  target_calories: '5',
+  target_protein_g: '0.3',
+  target_carbs_g: '0.3',
+  target_fat_g: '7'
+}
+[2025-09-26T17:58:11.589Z] Response Status: 200
+[2025-09-26T17:58:25.747Z] GET /api/diet-and-fitness/profile
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T17:58:25.751Z] Response Status: 200
+[2025-09-26T17:58:25.761Z] GET /api/diet-and-fitness/profile
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"12f-msrKqTBtV3nHdU/M2mPBP5wU9B8"'
+}
+[2025-09-26T17:58:25.766Z] Response Status: 200
+[2025-09-26T17:59:51.469Z] POST /api/diet-and-fitness/plans
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'content-length': '85',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'content-type': 'application/json',
+  'sec-ch-ua-mobile': '?0',
+  origin: 'http://localhost:3011',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+Request Body: {
+  healthGoal: 'muscleGain',
+  dietaryPreference: 'vegan',
+  fitnessLevel: 'intermediate'
+}
+Received request for plans: {
+  healthGoal: 'muscleGain',
+  dietaryPreference: 'vegan',
+  fitnessLevel: 'intermediate'
+}
+Sending response with plans: { dietPlanLength: 4, workoutPlanLength: 7 }
+[2025-09-26T17:59:51.474Z] Response Status: 200
+[2025-09-26T18:00:00.523Z] GET /api/diet-and-fitness/food-logs?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T18:00:00.530Z] Response Status: 200
+[2025-09-26T18:00:00.537Z] GET /api/diet-and-fitness/food-logs?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:00:00.541Z] Response Status: 200
+[2025-09-26T18:00:08.028Z] GET /api/diet-and-fitness/workouts?level=beginner
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T18:00:08.033Z] GET /api/diet-and-fitness/workout-schedule?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T18:00:08.037Z] Response Status: 200
+[2025-09-26T18:00:08.039Z] Response Status: 200
+[2025-09-26T18:00:08.052Z] GET /api/diet-and-fitness/workouts?level=beginner
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"1e4-OLUjItsw3yeSZxA11Hj6HwmrtEs"'
+}
+[2025-09-26T18:00:08.057Z] GET /api/diet-and-fitness/workout-schedule?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:00:08.060Z] Response Status: 200
+[2025-09-26T18:00:08.062Z] Response Status: 200
+[2025-09-26T18:00:12.289Z] GET /api/diet-and-fitness/workouts?level=intermediate
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T18:00:12.299Z] Response Status: 200
+[2025-09-26T18:00:13.904Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T18:00:13.908Z] Response Status: 200
+[2025-09-26T18:00:13.914Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:00:13.917Z] Response Status: 200
+[2025-09-26T18:00:26.204Z] PUT /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'content-length': '61',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'content-type': 'application/json',
+  'sec-ch-ua-mobile': '?0',
+  origin: 'http://localhost:3011',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+Request Body: { type: 'water', time: '', enabled: true, frequency: 'daily' }
+[2025-09-26T18:00:26.209Z] Response Status: 400
+Response Body: {"error":"type and time are required"}
+[2025-09-26T18:00:47.410Z] PUT /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'content-length': '66',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'content-type': 'application/json',
+  'sec-ch-ua-mobile': '?0',
+  origin: 'http://localhost:3011',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+Request Body: { type: 'water', time: '23:03', enabled: true, frequency: 'daily' }
+[2025-09-26T18:00:47.419Z] Response Status: 200
+[2025-09-26T18:00:47.429Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T18:00:47.432Z] Response Status: 200
+[2025-09-26T18:00:47.705Z] PUT /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'content-length': '66',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'content-type': 'application/json',
+  'sec-ch-ua-mobile': '?0',
+  origin: 'http://localhost:3011',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+Request Body: { type: 'water', time: '23:31', enabled: true, frequency: 'daily' }
+[2025-09-26T18:00:47.718Z] Response Status: 200
+[2025-09-26T18:00:47.730Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T18:00:47.733Z] Response Status: 200
+[2025-09-26T18:01:14.431Z] GET /api/diet-and-fitness/recipes?q=
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T18:01:14.441Z] Response Status: 200
+[2025-09-26T18:01:14.448Z] GET /api/diet-and-fitness/recipes?q=
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"31c-gKdE10SwccB/HE2TrWU14YUWeJI"'
+}
+[2025-09-26T18:01:14.452Z] Response Status: 200
+[2025-09-26T18:01:16.780Z] GET /api/diet-and-fitness/recipes/2
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+[2025-09-26T18:01:16.785Z] Response Status: 200
+[2025-09-26T18:02:20.257Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"a7-iI2nVntTOG+Kd1beHEUcq72XMZY"'
+}
+[2025-09-26T18:02:20.263Z] Response Status: 200
+[2025-09-26T18:02:20.272Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"a7-iI2nVntTOG+Kd1beHEUcq72XMZY"'
+}
+[2025-09-26T18:02:20.278Z] Response Status: 200
+[2025-09-26T18:02:21.802Z] GET /api/diet-and-fitness/workouts?level=beginner
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"1e4-OLUjItsw3yeSZxA11Hj6HwmrtEs"'
+}
+[2025-09-26T18:02:21.806Z] GET /api/diet-and-fitness/workout-schedule?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:02:21.810Z] Response Status: 200
+[2025-09-26T18:02:21.811Z] Response Status: 200
+[2025-09-26T18:02:21.819Z] GET /api/diet-and-fitness/workouts?level=beginner
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"1e4-OLUjItsw3yeSZxA11Hj6HwmrtEs"'
+}
+[2025-09-26T18:02:21.824Z] GET /api/diet-and-fitness/workout-schedule?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:02:21.829Z] Response Status: 200
+[2025-09-26T18:02:21.831Z] Response Status: 200
+[2025-09-26T18:02:24.659Z] POST /api/diet-and-fitness/workout-schedule
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'content-length': '36',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'content-type': 'application/json',
+  'sec-ch-ua-mobile': '?0',
+  origin: 'http://localhost:3011',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+}
+Request Body: { date: '2025-09-26', workout_id: 1 }
+[2025-09-26T18:02:24.676Z] Response Status: 201
+[2025-09-26T18:02:24.693Z] GET /api/diet-and-fitness/workout-schedule?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:02:24.697Z] Response Status: 200
+[2025-09-26T18:02:31.727Z] GET /api/diet-and-fitness/food-logs?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:02:31.731Z] Response Status: 200
+[2025-09-26T18:02:31.737Z] GET /api/diet-and-fitness/food-logs?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:02:31.740Z] Response Status: 200
+[2025-09-26T18:02:34.594Z] GET /api/diet-and-fitness/profile
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"12f-msrKqTBtV3nHdU/M2mPBP5wU9B8"'
+}
+[2025-09-26T18:02:34.598Z] Response Status: 200
+[2025-09-26T18:02:34.604Z] GET /api/diet-and-fitness/profile
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"12f-msrKqTBtV3nHdU/M2mPBP5wU9B8"'
+}
+[2025-09-26T18:02:34.607Z] Response Status: 200
+[2025-09-26T18:05:21.372Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"a7-iI2nVntTOG+Kd1beHEUcq72XMZY"'
+}
+[2025-09-26T18:05:21.377Z] Response Status: 200
+[2025-09-26T18:05:21.382Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"a7-iI2nVntTOG+Kd1beHEUcq72XMZY"'
+}
+[2025-09-26T18:05:21.383Z] Response Status: 200
+[2025-09-26T18:05:23.086Z] GET /api/diet-and-fitness/workouts?level=beginner
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"1e4-OLUjItsw3yeSZxA11Hj6HwmrtEs"'
+}
+[2025-09-26T18:05:23.094Z] GET /api/diet-and-fitness/workout-schedule?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"110-83Q3QYoHx4Q3v7gsIis79HPO5H8"'
+}
+[2025-09-26T18:05:23.096Z] Response Status: 200
+[2025-09-26T18:05:23.096Z] Response Status: 200
+[2025-09-26T18:05:23.102Z] GET /api/diet-and-fitness/workouts?level=beginner
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"1e4-OLUjItsw3yeSZxA11Hj6HwmrtEs"'
+}
+[2025-09-26T18:05:23.104Z] GET /api/diet-and-fitness/workout-schedule?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"110-83Q3QYoHx4Q3v7gsIis79HPO5H8"'
+}
+[2025-09-26T18:05:23.106Z] Response Status: 200
+[2025-09-26T18:05:23.106Z] Response Status: 200
+[2025-09-26T18:05:27.232Z] GET /api/diet-and-fitness/food-logs?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:05:27.242Z] Response Status: 200
+[2025-09-26T18:05:27.248Z] GET /api/diet-and-fitness/food-logs?date=2025-09-26
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"'
+}
+[2025-09-26T18:05:27.251Z] Response Status: 200
+[2025-09-26T18:14:45.990Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"a7-iI2nVntTOG+Kd1beHEUcq72XMZY"'
+}
+[2025-09-26T18:14:45.994Z] Response Status: 200
+[2025-09-26T18:14:45.999Z] GET /api/diet-and-fitness/reminders
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"a7-iI2nVntTOG+Kd1beHEUcq72XMZY"'
+}
+[2025-09-26T18:14:46.001Z] Response Status: 200
+[2025-09-26T18:14:46.751Z] GET /api/diet-and-fitness/recipes?q=
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"31c-gKdE10SwccB/HE2TrWU14YUWeJI"'
+}
+[2025-09-26T18:14:46.754Z] Response Status: 200
+[2025-09-26T18:14:46.760Z] GET /api/diet-and-fitness/recipes?q=
+Request Headers: {
+  host: 'localhost:5000',
+  connection: 'close',
+  'sec-ch-ua-platform': '"Windows"',
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWdoYXZyYWdoYXZ0bEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTM1OCwiZXhwIjoxNzU4OTk1NzU4fQ.PD6o0MAlPBUOYsTeyVd9utHcIwQyOCeRe4G7tblxCQY',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  accept: 'application/json',
+  'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  referer: 'http://localhost:3011/diet-fitness',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'if-none-match': 'W/"31c-gKdE10SwccB/HE2TrWU14YUWeJI"'
+}
+[2025-09-26T18:14:46.762Z] Response Status: 200

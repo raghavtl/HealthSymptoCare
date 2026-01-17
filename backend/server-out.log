@@ -1,0 +1,139 @@
+[dotenv@17.2.1] injecting env (8) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Connected to SQLite database
+SQLite database connection established successfully
+SQLite tables created or already exist
+Health tips inserted successfully
+Body parts inserted successfully
+Symptoms inserted successfully
+Body part symptoms inserted successfully
+Conditions inserted successfully
+Condition symptoms inserted successfully
+Medicines inserted successfully
+Condition medicines inserted successfully
+Diet plans inserted successfully
+Workout plans inserted successfully
+Foods inserted successfully
+Recipes inserted successfully
+Workouts inserted successfully
+Sample data inserted into SQLite database
+SQLite database initialization completed successfully
+Sample data inserted into SQLite database
+SQLite database initialization completed successfully
+SQLite database initialized successfully
+Server running on port 5051
+API is available at http://localhost:5051/api
+[2025-09-26T17:51:47.372Z] POST /api/users/register
+Request Headers: {
+  'user-agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584',
+  'content-type': 'application/json',
+  host: 'localhost:5051',
+  'content-length': '142',
+  connection: 'Keep-Alive'
+}
+Request Body: {
+  username: 'DietTester638945059073507665',
+  email: 'dfuser638945059073507665@example.com',
+  password: 'Password123!'
+}
+Registration attempt for email: dfuser638945059073507665@example.com, username: DietTester638945059073507665
+Looking for user with email: dfuser638945059073507665@example.com
+Normalized email for lookup: dfuser638945059073507665@example.com
+No exact match found, trying case-insensitive search for: dfuser638945059073507665@example.com
+No user found with this email
+Creating new user with email: dfuser638945059073507665@example.com, username: DietTester638945059073507665
+Original email: dfuser638945059073507665@example.com, Normalized email: dfuser638945059073507665@example.com
+Hashing password...
+User role set to: user
+Inserting user into database...
+User created successfully with ID: 2
+User registered successfully: DietTester638945059073507665 (dfuser638945059073507665@example.com), ID: 2
+[2025-09-26T17:51:47.452Z] Response Status: 201
+[2025-09-26T17:51:47.475Z] POST /api/users/login
+Request Headers: {
+  'user-agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584',
+  'content-type': 'application/json',
+  host: 'localhost:5051',
+  'content-length': '92'
+}
+Request Body: {
+  password: 'Password123!',
+  email: 'dfuser638945059073507665@example.com'
+}
+Login attempt for email: dfuser638945059073507665@example.com
+Normalized login email: dfuser638945059073507665@example.com
+Looking for user with email: dfuser638945059073507665@example.com
+Normalized email for lookup: dfuser638945059073507665@example.com
+User found with ID: 2, email: dfuser638945059073507665@example.com
+Comparing input email: dfuser638945059073507665@example.com with stored email: dfuser638945059073507665@example.com
+Email comparison: {
+  loginEmail: 'dfuser638945059073507665@example.com',
+  databaseEmail: 'dfuser638945059073507665@example.com',
+  match: true
+}
+Verifying password...
+Password verification result: true
+Generating token for user ID: 2, email: dfuser638945059073507665@example.com
+Token generated successfully
+Login successful for user: DietTester638945059073507665 (dfuser638945059073507665@example.com)
+[2025-09-26T17:51:47.542Z] Response Status: 200
+[2025-09-26T17:51:47.546Z] PUT /api/diet-and-fitness/profile
+Request Headers: {
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJkZnVzZXI2Mzg5NDUwNTkwNzM1MDc2NjVAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTEwNywiZXhwIjoxNzU4OTk1NTA3fQ.ADkQp3d0WG13ZTnT7AUufAYlnM1MER0nNLtl-w8UQkM',
+  'user-agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584',
+  'content-type': 'application/json',
+  host: 'localhost:5051',
+  'content-length': '315'
+}
+Request Body: {
+  target_fat_g: 60,
+  target_protein_g: 90,
+  weight_kg: 62,
+  target_calories: 1800,
+  height_cm: 165,
+  target_carbs_g: 180,
+  goal: 'weightLoss',
+  activity_level: 'moderate',
+  gender: 'female',
+  age: 28,
+  dietary_preference: 'vegetarian'
+}
+[2025-09-26T17:51:47.552Z] Response Status: 200
+[2025-09-26T17:51:47.557Z] GET /api/diet-and-fitness/foods?q=Apple
+Request Headers: {
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJkZnVzZXI2Mzg5NDUwNTkwNzM1MDc2NjVAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTEwNywiZXhwIjoxNzU4OTk1NTA3fQ.ADkQp3d0WG13ZTnT7AUufAYlnM1MER0nNLtl-w8UQkM',
+  'user-agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584',
+  host: 'localhost:5051'
+}
+[2025-09-26T17:51:47.559Z] Response Status: 200
+[2025-09-26T17:51:47.569Z] POST /api/diet-and-fitness/food-logs
+Request Headers: {
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJkZnVzZXI2Mzg5NDUwNTkwNzM1MDc2NjVAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTEwNywiZXhwIjoxNzU4OTk1NTA3fQ.ADkQp3d0WG13ZTnT7AUufAYlnM1MER0nNLtl-w8UQkM',
+  'user-agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584',
+  'content-type': 'application/json',
+  host: 'localhost:5051',
+  'content-length': '108'
+}
+Request Body: {
+  date: '2025-09-26',
+  quantity_g: 150,
+  food_id: 1,
+  meal_type: 'breakfast'
+}
+[2025-09-26T17:51:47.574Z] Response Status: 201
+[2025-09-26T17:51:47.579Z] POST /api/diet-and-fitness/water-logs
+Request Headers: {
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJkZnVzZXI2Mzg5NDUwNTkwNzM1MDc2NjVAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTEwNywiZXhwIjoxNzU4OTk1NTA3fQ.ADkQp3d0WG13ZTnT7AUufAYlnM1MER0nNLtl-w8UQkM',
+  'user-agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584',
+  'content-type': 'application/json',
+  host: 'localhost:5051',
+  'content-length': '55'
+}
+Request Body: { amount_ml: 300, date: '2025-09-26' }
+[2025-09-26T17:51:47.582Z] Response Status: 201
+[2025-09-26T17:51:47.585Z] GET /api/diet-and-fitness/dashboard?rangeDays=7
+Request Headers: {
+  authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJkZnVzZXI2Mzg5NDUwNTkwNzM1MDc2NjVAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1ODkwOTEwNywiZXhwIjoxNzU4OTk1NTA3fQ.ADkQp3d0WG13ZTnT7AUufAYlnM1MER0nNLtl-w8UQkM',
+  'user-agent': 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584',
+  host: 'localhost:5051'
+}
+[2025-09-26T17:51:47.587Z] Response Status: 200

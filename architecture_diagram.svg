@@ -1,0 +1,77 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Smart Health Buddy - Three-Tier Architecture</text>
+  
+  <!-- Client Tier (Frontend) -->
+  <rect x="100" y="100" width="600" height="150" fill="#D4F1F9" stroke="#000" stroke-width="2" rx="5" ry="5"/>
+  <text x="400" y="125" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">Presentation Tier (Frontend)</text>
+  
+  <!-- Frontend Components -->
+  <rect x="150" y="150" width="100" height="60" fill="#87CEEB" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="200" y="185" font-family="Arial" font-size="14" text-anchor="middle">React UI</text>
+  
+  <rect x="300" y="150" width="100" height="60" fill="#87CEEB" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="350" y="185" font-family="Arial" font-size="14" text-anchor="middle">Components</text>
+  
+  <rect x="450" y="150" width="100" height="60" fill="#87CEEB" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="500" y="185" font-family="Arial" font-size="14" text-anchor="middle">State Mgmt</text>
+  
+  <rect x="600" y="150" width="50" height="60" fill="#87CEEB" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="625" y="185" font-family="Arial" font-size="14" text-anchor="middle">API</text>
+  
+  <!-- Application Tier (Backend) -->
+  <rect x="100" y="300" width="600" height="150" fill="#D5F5E3" stroke="#000" stroke-width="2" rx="5" ry="5"/>
+  <text x="400" y="325" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">Application Tier (Backend)</text>
+  
+  <!-- Backend Components -->
+  <rect x="150" y="350" width="100" height="60" fill="#82E0AA" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="200" y="385" font-family="Arial" font-size="14" text-anchor="middle">Express.js</text>
+  
+  <rect x="300" y="350" width="100" height="60" fill="#82E0AA" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="350" y="385" font-family="Arial" font-size="14" text-anchor="middle">Routes</text>
+  
+  <rect x="450" y="350" width="100" height="60" fill="#82E0AA" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="500" y="385" font-family="Arial" font-size="14" text-anchor="middle">Controllers</text>
+  
+  <rect x="600" y="350" width="50" height="60" fill="#82E0AA" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="625" y="385" font-family="Arial" font-size="14" text-anchor="middle">JWT</text>
+  
+  <!-- Data Tier -->
+  <rect x="100" y="500" width="600" height="150" fill="#FCF3CF" stroke="#000" stroke-width="2" rx="5" ry="5"/>
+  <text x="400" y="525" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">Data Tier (Database)</text>
+  
+  <!-- Database Components -->
+  <rect x="250" y="550" width="100" height="60" fill="#F7DC6F" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="300" y="585" font-family="Arial" font-size="14" text-anchor="middle">SQLite</text>
+  
+  <rect x="450" y="550" width="100" height="60" fill="#F7DC6F" stroke="#000" stroke-width="1" rx="5" ry="5"/>
+  <text x="500" y="585" font-family="Arial" font-size="14" text-anchor="middle">Models</text>
+  
+  <!-- Arrows connecting tiers -->
+  <!-- Frontend to Backend -->
+  <line x1="400" y1="250" x2="400" y2="290" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Backend to Frontend -->
+  <line x1="420" y1="290" x2="420" y2="250" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Backend to Database -->
+  <line x1="400" y1="450" x2="400" y2="490" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Database to Backend -->
+  <line x1="420" y1="490" x2="420" y2="450" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <rect x="720" y="200" width="20" height="20" fill="#87CEEB" stroke="#000" stroke-width="1"/>
+  <text x="745" y="215" font-family="Arial" font-size="14" text-anchor="start">User Interface</text>
+  
+  <rect x="720" y="230" width="20" height="20" fill="#82E0AA" stroke="#000" stroke-width="1"/>
+  <text x="745" y="245" font-family="Arial" font-size="14" text-anchor="start">Business Logic</text>
+  
+  <rect x="720" y="260" width="20" height="20" fill="#F7DC6F" stroke="#000" stroke-width="1"/>
+  <text x="745" y="275" font-family="Arial" font-size="14" text-anchor="start">Data Storage</text>
+</svg>

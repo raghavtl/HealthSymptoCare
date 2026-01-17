@@ -1,0 +1,333 @@
+/* Dashboard.css */
+
+/* Global wellness background and typography */
+.wellness-bg {
+  background: linear-gradient(180deg, #f5f7fb 0%, #ffffff 100%);
+  font-family: Inter, Poppins, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Sleek pill toggles */
+.pill {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.35));
+  color: #0f172a;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(2,6,23,0.08);
+  transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+  backdrop-filter: saturate(140%) blur(8px);
+}
+.pill:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(2,6,23,0.12); }
+.pill-active {
+  color: #fff;
+  border-color: rgba(59,130,246,0.55);
+  background: linear-gradient(90deg, #60a5fa, #2563eb);
+  box-shadow: 0 10px 20px rgba(37,99,235,.25);
+}
+.dark .pill { color: #e5e7eb; border-color: rgba(255,255,255,0.12); background: rgba(31,41,55,0.65); }
+.dark .pill-active { background: linear-gradient(90deg, #6366f1, #4f46e5); border-color: rgba(99,102,241,0.6); box-shadow: 0 10px 20px rgba(99,102,241,.25); }
+
+/* Chart glass card */
+.chart-glass {
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.45), rgba(255,255,255,0.2));
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 12px 26px rgba(2,6,23,0.08), 0 4px 8px rgba(2,6,23,0.04);
+  backdrop-filter: blur(10px);
+}
+
+/* Dashboard header styling */
+.dashboard-header {
+  background-color: #20c997;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-header svg {
+  height: 2rem;
+  width: 2rem;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Widgets section styling */
+.widgets-section {
+  background-color: #343a40;
+  color: white;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.widgets-section h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Time range buttons */
+.time-range-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.time-range-selector button {
+  background-color: #495057;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.time-range-selector button:hover {
+  background-color: #6c757d;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.time-range-selector button.active {
+  background-color: #20c997;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(32, 201, 151, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-expandWidth {
+  animation: expandWidth 1s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Chart widgets styling */
+.trend-widget {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  height: 100%;
+}
+
+/* Dark mode overrides */
+.dark .trend-widget {
+  background-color: #1f2937; /* gray-800 */
+  color: #e5e7eb; /* gray-200 */
+}
+
+.trend-widget h3 {
+  color: #343a40;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.dark .trend-widget h3 {
+  color: #e5e7eb;
+}
+
+.metric-widget {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .metric-widget {
+  background-color: #1f2937; /* gray-800 */
+  color: #e5e7eb;
+}
+
+.metric-widget h3 {
+  color: #343a40;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.dark .metric-widget h3 {
+  color: #e5e7eb;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 0.5rem;
+}
+
+.dark .metric-value {
+  color: #f9fafb; /* gray-50 */
+}
+
+.metric-chart {
+  flex-grow: 1;
+  min-height: 80px;
+}
+
+/* Recent logs section styling */
+.recent-logs-section {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.dark .recent-logs-section {
+  background-color: #1f2937; /* gray-800 */
+  color: #e5e7eb;
+}
+
+.recent-logs-section h2 {
+  color: #343a40;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.recent-logs-table th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.recent-logs-table td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #e9ecef;
+  color: #495057;
+}
+
+.recent-logs-table tr:hover td {
+  background-color: #f8f9fa;
+}
+
+/* Progress bar styling */
+.progress-bar {
+  height: 0.5rem;
+  border-radius: 1rem;
+  background-color: #e9ecef;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #20c997;
+}
+
+/* Energy level colors */
+.energy-level-1 { background-color: #dc3545; }
+.energy-level-2 { background-color: #fd7e14; }
+.energy-level-3 { background-color: #ffc107; }
+.energy-level-4 { background-color: #20c997; }
+.energy-level-5 { background-color: #0dcaf0; }
+
+/* Shadow pulse animation for chart sections */
+@keyframes shadowPulse {
+  0% { box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08); }
+  50% { box-shadow: 0 12px 28px rgba(37, 99, 235, 0.18); }
+  100% { box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08); }
+}
+
+.animate-shadowPulse {
+  animation: shadowPulse 2.4s ease-in-out infinite;
+}
+
+/* Glassmorphism card styles for Personalized Action Center */
+.glass-card {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(255,255,255,0.08));
+  border: 1px solid rgba(255,255,255,0.30);
+  backdrop-filter: saturate(140%) blur(16px);
+  -webkit-backdrop-filter: saturate(140%) blur(16px);
+  box-shadow: 0 10px 25px rgba(2,6,23,0.08), 0 2px 6px rgba(2,6,23,0.04);
+  transition: transform .2s ease, box-shadow .2s ease;
+  overflow: hidden;
+}
+.glass-card:hover { transform: translateY(-2px); box-shadow: 0 16px 32px rgba(2,6,23,0.12), 0 4px 12px rgba(2,6,23,0.08); }
+.glass-card::after {
+  content: "";
+  position: absolute; inset: -2px; border-radius: inherit;
+  background: radial-gradient(1200px 300px at -10% -20%, var(--glassTint, rgba(59,130,246,.18)) 0%, transparent 60%);
+  pointer-events: none;
+}
+.glass-blue   { --glassTint: rgba(59,130,246,.22); }
+.glass-indigo { --glassTint: rgba(99,102,241,.22); }
+.glass-amber  { --glassTint: rgba(245,158,11,.24); }
+.glass-emerald{ --glassTint: rgba(16,185,129,.24); }
+.dark .glass-card { background: linear-gradient(135deg, rgba(17,24,39,0.55), rgba(17,24,39,0.38)); border-color: rgba(255,255,255,0.08); }
+
+/* Neumorphic progress bar */
+.neo-progress {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.25));
+  border: 1px solid rgba(255,255,255,0.35);
+  overflow: hidden;
+}
+.dark .neo-progress { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); }
+.neo-progress-fill { height: 100%; border-radius: inherit; transition: width 700ms ease; box-shadow: 0 4px 12px var(--barShadow); background: var(--bar);
+}
+.progress-blue   { --bar: linear-gradient(90deg, #60a5fa, #2563eb); --barShadow: rgba(37,99,235,0.35); }
+.progress-indigo { --bar: linear-gradient(90deg, #818cf8, #4f46e5); --barShadow: rgba(79,70,229,0.35); }
+.progress-amber  { --bar: linear-gradient(90deg, #fbbf24, #f59e0b); --barShadow: rgba(245,158,11,0.35); }
+.progress-emerald{ --bar: linear-gradient(90deg, #34d399, #10b981); --barShadow: rgba(16,185,129,0.35); }
+
+/* Futuristic CTA button */
+.neo-btn { border-radius: 9999px; display: inline-flex; align-items: center; gap: .5rem; padding: .6rem 1rem; font-weight: 600; color: #fff; border: 1px solid rgba(255,255,255,0.25); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: transform .15s ease, box-shadow .15s ease; }
+.neo-btn:hover { transform: translateY(-1px); }
+.btn-blue   { background: linear-gradient(90deg, #3b82f6, #2563eb); box-shadow: 0 8px 20px rgba(37,99,235,0.28); }
+.btn-indigo { background: linear-gradient(90deg, #6366f1, #4f46e5); box-shadow: 0 8px 20px rgba(79,70,229,0.28); }
+.btn-amber  { background: linear-gradient(90deg, #f59e0b, #d97706); box-shadow: 0 8px 20px rgba(245,158,11,0.28); }
+.btn-emerald{ background: linear-gradient(90deg, #10b981, #059669); box-shadow: 0 8px 20px rgba(16,185,129,0.28); }
+.dark .neo-btn { border-color: rgba(255,255,255,0.15); }

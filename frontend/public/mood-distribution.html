@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Distribution</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #4285f4;
+      color: white;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+    .chart-container {
+      position: relative;
+      margin: 0 auto;
+      height: 300px;
+      width: 300px;
+    }
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    .legend {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin: 5px 10px;
+    }
+    .legend-color {
+      width: 15px;
+      height: 15px;
+      border-radius: 3px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mood Distribution</h1>
+    <p class="subtitle">Based on 3 logs</p>
+    
+    <div class="chart-container">
+      <canvas id="moodChart"></canvas>
+    </div>
+    
+    <div class="legend" id="chartLegend"></div>
+  </div>
+
+  <script>
+    // Sample data - in a real app this would come from your backend
+    const moodData = {
+      'very-sad': 1,
+      'sad': 0,
+      'neutral': 1,
+      'happy': 1,
+      'very-happy': 0
+    };
+
+    // Define mood names and colors
+    const moodNames = {
+      'very-sad': 'Very Sad',
+      'sad': 'Sad',
+      'neutral': 'Neutral',
+      'happy': 'Happy',
+      'very-happy': 'Very Happy'
+    };
+    
+    const moodColors = {
+      'very-sad': '#FF5252',  // Bright Red
+      'sad': '#FF9E80',       // Coral
+      'neutral': '#FFEB3B',    // Bright Yellow
+      'happy': '#69F0AE',     // Bright Green
+      'very-happy': '#18FFFF' // Cyan
+    };
+    
+    // Prepare data for the chart
+    const labels = [];
+    const data = [];
+    const backgroundColor = [];
+    const moodOrder = ['very-happy', 'happy', 'neutral', 'sad', 'very-sad'];
+    
+    moodOrder.forEach(mood => {
+      if (moodData[mood] > 0) {
+        labels.push(moodNames[mood]);
+        data.push(moodData[mood]);
+        backgroundColor.push(moodColors[mood]);
+      }
+    });
+    
+    // Create the chart
+    const ctx = document.getElementById('moodChart').getContext('2d');
+    const moodChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: data,
+          backgroundColor: backgroundColor,
+          borderColor: backgroundColor,
+          borderWidth: 1,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false // Hide default legend, we'll create our own
+          },
+        },
+        cutout: '65%',
+      }
+    });
+    
+    // Create custom legend
+    const legendContainer = document.getElementById('chartLegend');
+    moodOrder.forEach(mood => {
+      if (moodData[mood] > 0) {
+        const item = document.createElement('div');
+        item.className = 'legend-item';
+        
+        const colorBox = document.createElement('div');
+        colorBox.className = 'legend-color';
+        colorBox.style.backgroundColor = moodColors[mood];
+        
+        const label = document.createElement('span');
+        label.textContent = moodNames[mood];
+        
+        item.appendChild(colorBox);
+        item.appendChild(label);
+        legendContainer.appendChild(item);
+      }
+    });
+  </script>
+</body>
+</html>

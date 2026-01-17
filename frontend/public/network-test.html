@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Test</title>
+</head>
+<body>
+  <h1>Network Connection Test</h1>
+  <div id="status">Checking connection...</div>
+  
+  <script>
+    // Simple test to verify network connectivity
+    const statusElement = document.getElementById('status');
+    
+    function checkConnection() {
+      statusElement.textContent = 'Testing connection...';
+      
+      // Fetch a local resource
+      fetch('/favicon.svg')
+        .then(response => {
+          if (response.ok) {
+            statusElement.textContent = 'Connection successful! ✅';
+            statusElement.style.color = 'green';
+          } else {
+            statusElement.textContent = `Connection error: ${response.status} ${response.statusText}`;
+            statusElement.style.color = 'red';
+          }
+        })
+        .catch(error => {
+          statusElement.textContent = `Connection failed: ${error.message}`;
+          statusElement.style.color = 'red';
+          console.error('Connection test failed:', error);
+        });
+    }
+    
+    // Run test on page load
+    window.addEventListener('load', checkConnection);
+  </script>
+</body>
+</html>

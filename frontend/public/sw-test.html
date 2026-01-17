@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Worker Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+    .status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+    .success { background-color: #d4edda; color: #155724; }
+    .error { background-color: #f8d7da; color: #721c24; }
+    .info { background-color: #d1ecf1; color: #0c5460; }
+    button { margin: 5px; padding: 8px 16px; }
+  </style>
+</head>
+<body>
+  <h1>Service Worker Test</h1>
+  <div id="swStatus" class="status info">Checking service worker support...</div>
+  
+  <div>
+    <button id="registerSW">Register Service Worker</button>
+    <button id="unregisterSW">Unregister Service Worker</button>
+    <button id="checkSW">Check Status</button>
+  </div>
+  
+  <script>
+    const statusElement = document.getElementById('swStatus');
+    const registerButton = document.getElementById('registerSW');
+    const unregisterButton = document.getElementById('unregisterSW');
+    const checkButton = document.getElementById('checkSW');
+    
+    // Update status with appropriate styling
+    function updateStatus(message, type) {
+      statusElement.textContent = message;
+      statusElement.className = `status ${type}`;
+    }
+    
+    // Check if service workers are supported
+    if ('serviceWorker' in navigator) {
+      updateStatus('Service Worker is supported in this browser', 'info');
+      
+      // Enable buttons
+      registerButton.disabled = false;
+      unregisterButton.disabled = false;
+      checkButton.disabled = false;
+    } else {
+      updateStatus('Service Worker is not supported in this browser', 'error');
+      
+      // Disable buttons
+      registerButton.disabled = true;
+      unregisterButton.disabled = true;
+      checkButton.disabled = true;
+    }
+    
+    // Register service worker
+    registerButton.addEventListener('click', () => {
+      updateStatus('Attempting to register service worker...', 'info');
+      
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          updateStatus(`Service Worker registered successfully with scope: ${registration.scope}`, 'success');
+          console.log('SW registered:', registration);
+        })
+        .catch(error => {
+          updateStatus(`Service Worker registration failed: ${error.message}`, 'error');
+          console.error('SW registration failed:', error);
+        });
+    });
+    
+    // Unregister service worker
+    unregisterButton.addEventListener('click', () => {
+      updateStatus('Checking for registered service workers...', 'info');
+      
+      navigator.serviceWorker.getRegistrations()
+        .then(registrations => {
+          if (registrations.length === 0) {
+            updateStatus('No service workers are currently registered', 'info');
+            return;
+          }
+          
+          let unregisterPromises = registrations.map(registration => {
+            return registration.unregister()
+              .then(success => ({ success, scope: registration.scope }));
+          });
+          
+          Promise.all(unregisterPromises)
+            .then(results => {
+              const successful = results.filter(r => r.success).length;
+              updateStatus(`Unregistered ${successful} of ${results.length} service workers`, 
+                successful > 0 ? 'success' : 'info');
+            });
+        })
+        .catch(error => {
+          updateStatus(`Error unregistering service workers: ${error.message}`, 'error');
+          console.error('SW unregistration error:', error);
+        });
+    });
+    
+    // Check service worker status
+    checkButton.addEventListener('click', () => {
+      updateStatus('Checking service worker status...', 'info');
+      
+      navigator.serviceWorker.getRegistrations()
+        .then(registrations => {
+          if (registrations.length === 0) {
+            updateStatus('No service workers are currently registered', 'info');
+          } else {
+            const scopes = registrations.map(r => r.scope).join(', ');
+            updateStatus(`${registrations.length} service worker(s) registered with scopes: ${scopes}`, 'success');
+          }
+        })
+        .catch(error => {
+          updateStatus(`Error checking service worker status: ${error.message}`, 'error');
+          console.error('SW status check error:', error);
+        });
+    });
+    
+    // Check status on page load
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.getRegistrations()
+        .then(registrations => {
+          if (registrations.length > 0) {
+            const scopes = registrations.map(r => r.scope).join(', ');
+            updateStatus(`${registrations.length} service worker(s) already registered with scopes: ${scopes}`, 'info');
+          }
+        })
+        .catch(error => {
+          console.warn('Initial SW check failed:', error);
+        });
+    });
+  </script>
+</body>
+</html>

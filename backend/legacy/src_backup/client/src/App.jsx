@@ -1,0 +1,111 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import SymptomChecker from './pages/SymptomChecker';
+import WellnessLogger from './pages/WellnessLogger';
+import HealthTips from './pages/HealthTips';
+import Dashboard from './pages/Dashboard';
+import DietAndFitness from './pages/DietAndFitness';
+import DeStressZone from './pages/DeStressZone';
+import HealthConditions from './pages/HealthConditions';
+import NearbyHospitals from './pages/NearbyHospitals';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import AdminDashboard from './pages/AdminDashboard';
+import UserProfile from './pages/UserProfile';
+import ProtectedRoute from './components/ProtectedRoute';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './styles/leaflet.css';
+
+function App() {
+  return (
+    <AuthProvider>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <ToastContainer 
+          position="top-center" 
+          autoClose={3000} 
+          hideProgressBar={false} 
+          newestOnTop={true} 
+          closeOnClick={true} 
+          rtl={false} 
+          pauseOnFocusLoss={true} 
+          draggable={true} 
+          pauseOnHover={true} 
+          theme="colored" 
+        />
+        <main className="flex-grow container mx-auto px-4 py-8">
+          <Routes>
+            {/* Public routes */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            
+            {/* Protected routes */}
+            <Route path="/" element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            } />
+            <Route path="/symptom-checker" element={
+              <ProtectedRoute>
+                <SymptomChecker />
+              </ProtectedRoute>
+            } />
+            <Route path="/wellness-logger" element={
+              <ProtectedRoute>
+                <WellnessLogger />
+              </ProtectedRoute>
+            } />
+            <Route path="/health-tips" element={
+              <ProtectedRoute>
+                <HealthTips />
+              </ProtectedRoute>
+            } />
+            <Route path="/dashboard" element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } />
+            <Route path="/admin" element={
+              <ProtectedRoute adminOnly={true}>
+                <AdminDashboard />
+              </ProtectedRoute>
+            } />
+            <Route path="/diet-fitness" element={
+              <ProtectedRoute>
+                <DietAndFitness />
+              </ProtectedRoute>
+            } />
+            <Route path="/de-stress" element={
+              <ProtectedRoute>
+                <DeStressZone />
+              </ProtectedRoute>
+            } />
+            <Route path="/health-conditions" element={
+              <ProtectedRoute>
+                <HealthConditions />
+              </ProtectedRoute>
+            } />
+            <Route path="/nearby-hospitals" element={
+              <ProtectedRoute>
+                <NearbyHospitals />
+              </ProtectedRoute>
+            } />
+            <Route path="/profile" element={
+              <ProtectedRoute>
+                <UserProfile />
+              </ProtectedRoute>
+            } />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </AuthProvider>
+  );
+}
+
+export default App;
