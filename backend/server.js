@@ -733,16 +733,6 @@ function startReminderScheduler() {
 // Initialize database and start server
 async function startServer() {
   try {
-    // Test database connection
-    const connected = await testConnection();
-    if (!connected) {
-      console.error('Failed to connect to the SQLite database. Server will not start.');
-      process.exit(1);
-    }
-    
-    // Initialize the SQLite database
-
-
     // Ensure reminders table has last_sent_date
     await ensureReminderLastSentColumn();
 
