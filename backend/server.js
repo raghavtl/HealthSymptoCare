@@ -5,14 +5,12 @@ const dotenv = require('dotenv');
 const axios = require('axios');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const { testConnection } = require('./config/sqlite-db');
-const { initializeSQLiteDatabase } = require('./config/init-sqlite-db');
 const { apiLimiter } = require('./middleware/rateLimiter');
 const { errorHandler, notFound } = require('./middleware/errorHandler');
 
 // Load environment variables
 dotenv.config();
-
+require('./config/sqlite-db');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -743,8 +741,7 @@ async function startServer() {
     }
     
     // Initialize the SQLite database
-    await initializeSQLiteDatabase();
-    console.log('SQLite database initialized successfully');
+
 
     // Ensure reminders table has last_sent_date
     await ensureReminderLastSentColumn();
